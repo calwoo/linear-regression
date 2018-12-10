@@ -92,6 +92,10 @@ for i in range(num_episodes):
 
 # How did we do?
 plt.scatter(X_raw, y)
+x_plot = np.linspace(0,1,30)
+plt.plot(x_plot, 3*x_plot+2, '-g', label="real line")
+plt.plot(x_plot, w[1]*x_plot+w[0], '-r', label="predicted line")
+plt.legend()
 plt.show()
 
 
